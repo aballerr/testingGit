@@ -29,7 +29,7 @@ const Form = styled.form`
   padding-bottom: 50px;
 
   @media only screen and (max-width: 600px) {
-    width: 95z%;
+    width: 95%;
   }
 `
 
