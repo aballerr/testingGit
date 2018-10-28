@@ -13,6 +13,7 @@ const IconDiv = styled.div`
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
     
   }
 
@@ -51,6 +52,11 @@ margin-right: auto;
 background-color: rgba(255, 255, 255, 10);
 padding: 50px;
 border-radius: 50%;
+
+ @media only screen and (max-width: 720px) {
+   width: 30px;
+   height: 30px;
+  }
 `
 
 

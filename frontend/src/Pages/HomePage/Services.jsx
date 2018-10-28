@@ -30,7 +30,12 @@ const IconsDiv = styled.div`
  @media only screen and (max-width: 600px) {
    flex-direction: column;
    width: 100%;
+
  }
+
+
+
+
 `
 
 const Background = styled.div`
