@@ -25,8 +25,8 @@ const CenterDiv = styled.div`
   margin-right: auto;
   @media screen and (max-width: 700px) {
     width: 100%;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
     flex-direction: column;
   }
 `;
