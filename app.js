@@ -58,7 +58,7 @@ app.use(bodyParser.json());
 
 app.post('/email', (req, res) => {
   
-  sendEmail(req.body);
+  // sendEmail(req.body);
   res.send('received');
 });
 
