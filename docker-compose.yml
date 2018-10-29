@@ -6,3 +6,4 @@ services:
      - "80:80"
     environment:
      - port=80
+     - prod=true

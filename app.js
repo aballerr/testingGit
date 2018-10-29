@@ -59,7 +59,10 @@ app.use(bodyParser.json());
 
 app.post('/email', (req, res) => {
   
-  // sendEmail(req.body);
+  if(process.env.prod) {
+    sendEmail(req.body);
+  }
+ 
   res.send('received');
 });
 
