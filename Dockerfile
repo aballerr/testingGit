@@ -16,5 +16,14 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+RUN cd /frontend
+
+RUN npm install 
+
+RUN npm run build 
+
+RUN cd .. 
+
+
 EXPOSE 80
 CMD [ "node", "app.js" ]
