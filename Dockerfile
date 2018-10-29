@@ -10,6 +10,7 @@ COPY package*.json ./
 
 
 RUN npm install
+RUN npm install nodemon
 # If you are building your code for production
 # RUN npm install --only=production
 
@@ -17,4 +18,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 80
-CMD [ "node", "app.js" ]
+CMD [ "nodemon", "app.js" ]

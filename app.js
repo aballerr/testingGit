@@ -1,12 +1,14 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 const cors = require('cors');
 const email = require('./config/email');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 
+
+console.log(process.env.port);
 
 
 
