@@ -18,4 +18,4 @@ RUN npm install nodemon
 COPY . .
 
 EXPOSE 80
-CMD [ "nodemon", "app.js" ]
+CMD [ "node", "app.js" ]
