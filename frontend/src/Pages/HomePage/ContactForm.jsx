@@ -56,26 +56,22 @@ const WidthWrap = styled.span`
   }
 `;
 
-const rotate = keyframes`
+const loader = keyframes`
   from {
-    transform: translateY(0px);
+    padding: 0;
     opacity: 1;
   }
 
   to {
-    transform: translateY(300px);
+    padding: 20px;
     opacity: 0;
   }
 `;
 
-const SlideOut = styled.div `
-   animation: ${rotate} 1s ease-in;
-`
+
 
 
 const Button = styled.button`
-
-
   width: 100%;
   padding: 14px 0;
   margin-top: 10px;
@@ -118,15 +114,17 @@ class ContactForm extends Component {
 
   submit = () => {
     // console.log(this.state);
-    this.setState({sending: true})
+
     EmailService.sendEmail(this.state)
       .then(() => {
+        console.log('got')
         this.setState({
           email: "",
           name: "",
           budget: "",
           subject: "",
-          additionalComments: ""
+          additionalComments: "",
+          sending: true
         });
       })
       .catch(err => {
@@ -134,15 +132,9 @@ class ContactForm extends Component {
       });
   };
 
-  test = () => {
-    console.log("testing");
-  };
 
   render() {
-    // if (this.width <= 600) {
-    //   return <MobileContactFrom />
-    // }
-    // else
+
 
     return (
       <Wrapper>
@@ -218,8 +210,11 @@ class ContactForm extends Component {
             multiline={true}
             rows={5}
           />
-          <Button type="button" onClick={this.submit}>
-            {this.state.sending ? <SlideOut> sending </SlideOut> : "Submit"}
+
+
+          
+          <Button disabled={this.state.sending} type="button" onClick={this.submit}>
+            {this.state.sending ? "Message Sent!" : "Submit"}
           </Button>
         </Form>
       </Wrapper>
